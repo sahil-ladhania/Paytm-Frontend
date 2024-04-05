@@ -46,7 +46,7 @@ const LoginPageComponent = () => {
 
                     <p className="mt-10 text-center text-sm text-gray-500">
                         Dont have account ?
-                        <Link className="font-semibold leading-6 text-sky-600 hover:text-sky-400" to="/signup">Signup</Link>
+                        <Link className="font-semibold leading-6 text-sky-600 hover:text-sky-400" to="/">Signup</Link>
                     </p>
                 </div>
             </div>

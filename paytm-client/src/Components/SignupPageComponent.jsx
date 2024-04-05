@@ -1,6 +1,18 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getAllUsers } from '../Utils/userUtils.js';
 
 const SignupPageComponent = () => {
+    // Using useEffect for Getting All Users
+    useEffect(() => {
+        getAllUsers()
+            .then((data) => {
+                console.log(data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    },[]);
     return (
         <>
             <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
@@ -17,7 +29,7 @@ const SignupPageComponent = () => {
                                 First Name
                             </label>
                             <div className="mt-2">
-                                <input id="first-name" name="first-name" type="text" required className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                <input  id="first-name" name="first-name" type="text" required className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                             </div>
                         </div>
                         <div>
@@ -25,7 +37,7 @@ const SignupPageComponent = () => {
                                 Last Name
                             </label>
                             <div className="mt-2">
-                                <input id="last-name" name="last-name" type="text" required className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                <input  id="last-name" name="last-name" type="text" required className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                             </div>
                         </div>
                         <div>
@@ -33,7 +45,7 @@ const SignupPageComponent = () => {
                                 Email
                             </label>
                             <div className="mt-2">
-                                <input id="email" name="email" type="email" required className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                <input  id="email" name="email" type="email" required className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                             </div>
                         </div>
                         <div>
@@ -43,7 +55,7 @@ const SignupPageComponent = () => {
                                 </label>
                             </div>
                             <div className="mt-2">
-                                <input id="password" name="password" type="password" required className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                <input  id="password" name="password" type="password" required className="px-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                             </div>
                         </div>
                         <div>
